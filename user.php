@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 if (isset($_POST['createUser'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
