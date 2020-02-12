@@ -42,7 +42,7 @@ function getUser()
     $dbdata = array();
 
 
-    while ( $row = $result->fetch_assoc())  {
+    while ($row = $result->fetch_assoc())  {
         $dbdata[]=$row;
     }
 
