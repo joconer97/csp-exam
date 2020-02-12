@@ -1,5 +1,10 @@
 <?php
 
+define("SERVER", "localhost");
+define("USERNAME","root");
+define("PASSWORD", "");
+define("DBNAME", "examdb");
+
 if (isset($_POST['createUser'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -20,7 +25,7 @@ if (isset($_POST['getUser'])) {
 
 function getUser()
 {
-	$mysqli = new mysqli("localhost", "root", "", "examdb");
+	$mysqli = new mysqli(SERVER,USERNAME,PASSWORD,DBNAME);
 
     // Check connection
     if($mysqli === false){
@@ -51,7 +56,7 @@ function getUser()
 
 function createUser($username,$password)
 {
-    $mysqli = new mysqli("localhost", "root", "", "examdb");
+    $mysqli = new mysqli(SERVER,USERNAME,PASSWORD,DBNAME);
 
     // Check connection
     if($mysqli === false){
@@ -73,7 +78,7 @@ function createUser($username,$password)
 
 function userLogin($username,$password)
 {
-    $mysqli = new mysqli("localhost", "root", "", "examdb");
+    $mysqli = new mysqli(SERVER,USERNAME,PASSWORD,DBNAME);
 
     // Check connection
     if($mysqli === false){
